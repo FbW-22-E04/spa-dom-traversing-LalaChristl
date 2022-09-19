@@ -18,16 +18,6 @@ title1.forEach(item => item.previousElementSibling.style.border = '5px solid bla
 
 let label = document.querySelectorAll('label');
 
-// const result1 = label[0].matches('.mild')
-// // console.log(result1);
-// const mild = document.querySelector('.mild')
-// mild.style.border = '5px solid yellow'
-
-// const result2 = label[1].matches('.intense')
-// // console.log(result2);
-// const intense = document.querySelector('.intense')
-// intense.style.border = '5px solid orange'
-
 label.forEach(item => {
     if (item.matches('.mild')) {
         item.style.border = '5px solid yellow'
