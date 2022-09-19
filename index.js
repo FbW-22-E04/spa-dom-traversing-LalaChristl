@@ -21,14 +21,14 @@ let label = document.querySelectorAll('label');
 
 label.forEach(item => {
     if (item.matches('.mild')) {
-        item.style.border = '5px solid yellow'
+        item.style.border = '3px solid yellow'
     }
     else if (item.matches('.intense'))
-    { item.style.border = '5px solid orange'
+    { item.style.border = '3px solid orange'
 
     }
     else {
-        item.style.border = '5px solid red'
+        item.style.border = '3px solid red'
     }})
 
 
@@ -36,11 +36,17 @@ label.forEach(item => {
 
 // Add all the children of the .nav-list to the footer's unordered list, .site-map. Note: the .nav-list should still contain its children.
 
-const navList = document.querySelector('.nav-list')
-const siteMap = document.querySelector('.site-map')
-// console.log(navList);
-// console.log(navList.children);
-Array.from(navList.children).forEach(item => siteMap.appendChild(item))
+
+const navList = document.querySelector('.nav-list');
+const navListClone = navList.cloneNode(true)
+
+const siteMap = document.querySelector('.site-map');
+
+
+
+// // console.log(navList);
+// // console.log(navList.children);
+Array.from(navListClone.children).forEach((item) => {siteMap.appendChild(item)})
 
 
 
