@@ -6,12 +6,13 @@ header.style.border = '5px solid black'
 
 
 // If the .info section contains an .info-package, select all package-titles and give the title's previous element a border.
+const info = document.querySelector('.info')
+const infoPackage = document.querySelector('.info-package')
+const packageTitle = document.querySelectorAll('.package-title');
 
-const title1 = document.querySelectorAll('.package-title');
-// console.log(title1);
-// console.log(title1[0].previousElementSibling);
-title1.forEach(item => item.previousElementSibling.style.border = '5px solid black')
-
+if (info.contains(infoPackage)){
+packageTitle.forEach(item => item.previousElementSibling.style.border = '5px solid black')
+}
 
 
 // Check if the label's class matches "mild". If so, give the label a yellow solid border. If the label's class matches "intense", give the label an orange solid border. If the class does not match either, give the label a red solid border.
